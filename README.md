@@ -1,7 +1,6 @@
 # MCP Rules Server
 
-MCP (Model Context Protocol) server with modular architecture for sharing AI coding assistant rules across projects, tech stacks, and languages.  
-The `rules/` folder includes example rules for multiple Bürokratt projects. Bürokratt is an open-source public sector virtual assistant platform.
+MCP (Model Context Protocol) server with modular architecture for sharing AI coding assistant rules across projects, tech stacks, and languages.
 
 ## Setup
 
@@ -54,6 +53,8 @@ If you followed the setup instructions above, your AI assistant will automatical
 - "Find rules about testing"
 - "Load Service-Module rules"
 
+<!-- todo all below needs review -->
+
 ## MCP Server Features
 
 Once configured, the MCP server provides:
@@ -72,6 +73,8 @@ Once configured, the MCP server provides:
 ## Development
 
 ### Editing rules
+
+The `rules/` folder includes example rules for multiple Bürokratt projects. Bürokratt is an open-source public sector virtual assistant platform.
 
 Rules are loaded fresh on every request, **so no server restart is needed**.
 
