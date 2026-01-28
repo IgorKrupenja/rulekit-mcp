@@ -11,13 +11,35 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
 
 import { getAvailableScopeIds } from '@/utils/manifest.ts';
-import { searchRulesByKeyword } from '@/utils/rules.ts';
+import { getMergedRules, searchRulesByKeyword } from '@/utils/rules.ts';
 import type { RuleScope } from '@/utils/types.ts';
 
 /**
  * Set up tool handlers for the MCP server
  */
 export function setupTools(server: McpServer): void {
+  server.registerTool(
+    'get_rules',
+    {
+      description: 'Get rules for a specific scope and id',
+      inputSchema: z.object({
+        scope: z.enum(['project', 'group', 'tech', 'language']).describe('Scope type'),
+        id: z.string().describe('Scope identifier'),
+      }),
+    },
+    async (args) => {
+      const rules = await getMergedRules({ scope: args.scope, id: args.id });
+      return {
+        content: [
+          {
+            type: 'text' as const,
+            text: rules,
+          },
+        ],
+      };
+    },
+  );
+
   // Tool: Get MCP server usage instructions
   server.registerTool(
     'get_mcp_instructions',
