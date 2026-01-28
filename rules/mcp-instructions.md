@@ -2,12 +2,12 @@
 appliesTo:
   groups:
     - global
-description: Instructions for AI assistants on how to use the modular-mcp server
+description: Instructions for AI assistants on how to use the codex-mcp server
 ---
 
 # MCP Rules Server Integration
 
-`modular-mcp` server is available to provide AI coding assistant rules for different tech stacks, projects, and languages.
+`codex-mcp` server is available to provide AI coding assistant rules for different tech stacks, projects, and languages.
 
 ## When to Load Rules
 

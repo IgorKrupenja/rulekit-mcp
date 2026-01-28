@@ -1,7 +1,8 @@
-# MCP Rules Server
+# Codex MCP
 
-MCP (Model Context Protocol) server with modular architecture for sharing AI coding assistant rules across projects, tech stacks, and languages.  
-The `rules/` folder includes example rules for multiple Bürokratt projects. Bürokratt is an open-source public sector virtual assistant platform.
+> **Codex** [/ˈkoʊdɛks/] — from Latin _cōdex_, meaning "book" or, specifically, **"book of rules/guidelines"**
+
+A modular MCP (Model Context Protocol) server for sharing AI coding assistant rules for different projects and tech stacks.
 
 ## Setup
 
@@ -18,13 +19,13 @@ Note that this can be a folder with multiple projects/repositories.
 #### Cursor
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/IgorKrupenja/modular-mcp/main/scripts/setup.sh | bash -s -- cursor
+curl -sSL https://raw.githubusercontent.com/IgorKrupenja/codex-mcp/main/scripts/setup.sh | bash -s -- cursor
 ```
 
 #### VS Code
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/IgorKrupenja/modular-mcp/main/scripts/setup.sh | bash -s -- vscode
+curl -sSL https://raw.githubusercontent.com/IgorKrupenja/codex-mcp/main/scripts/setup.sh | bash -s -- vscode
 ```
 
 #### JetBrains
@@ -32,15 +33,15 @@ curl -sSL https://raw.githubusercontent.com/IgorKrupenja/modular-mcp/main/script
 1. Run:
 
    ```bash
-   curl -sSL https://raw.githubusercontent.com/IgorKrupenja/modular-mcp/main/scripts/setup.sh | bash -s -- jetbrains
+   curl -sSL https://raw.githubusercontent.com/IgorKrupenja/codex-mcp/main/scripts/setup.sh | bash -s -- jetbrains
    ```
 
-2. In **Settings | Tools | AI Assistant | Project Rules**, set `modular-mcp` to **Always** mode.
+2. In **Settings | Tools | AI Assistant | Project Rules**, set `codex-mcp` to **Always** mode.
 
 #### Claude Code
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/IgorKrupenja/modular-mcp/main/scripts/setup.sh | bash -s -- claude
+curl -sSL https://raw.githubusercontent.com/IgorKrupenja/codex-mcp/main/scripts/setup.sh | bash -s -- claude
 ```
 
 ## Prompting
@@ -54,6 +55,8 @@ If you followed the setup instructions above, your AI assistant will automatical
 - "Find rules about testing in MCP?"
 - "Load Service-Module rules"
 - "Get rules for this project in MCP" (provided you have selected a file belonging to the project)
+
+<!-- todo all below needs review -->
 
 ## MCP Server Features
 
@@ -73,6 +76,8 @@ Once configured, the MCP server provides:
 ## Development
 
 ### Editing rules
+
+The `rules/` folder includes example rules for multiple Bürokratt projects. Bürokratt is an open-source public sector virtual assistant platform.
 
 Rules are loaded fresh on every request, **so no server restart is needed**.
 

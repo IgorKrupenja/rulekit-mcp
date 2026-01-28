@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "modular-mcp": {
+    "codex-mcp": {
       "type": "streamable-http",
       "url": "http://localhost:3627/mcp"
     }
