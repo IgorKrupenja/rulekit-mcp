@@ -15,4 +15,4 @@ applyTo: "**"
 - Always log errors with contextual information
 
 ## MCP Rules Server Integration
-When working with the `modular-mcp` MCP server, use the `get_mcp_instructions` tool to get detailed usage instructions.
+When working with the `codex-mcp` MCP server, use the `get_mcp_instructions` tool to get detailed usage instructions.
