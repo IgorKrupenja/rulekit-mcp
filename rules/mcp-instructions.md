@@ -30,6 +30,8 @@ Use MCP resources to load rules directly into context. The resource URI format i
 - `rules://language/{language-id}` - Language rules (e.g., typescript, java)
 - `rules://project/{project-id}` - Project-specific rules (e.g., buerokratt/Service-Module)
 
+Use the `FetchMcpResource` tool (NOT `CallMcpTool`) to load rules by their URI (e.g., `rules://tech/nestjs`).
+
 **When the exact ID is unclear or user asks for available options:**
 Use the `list_scope_ids` tool to discover what's available for that scope before loading.
 
@@ -42,7 +44,7 @@ Use the `list_scope_ids` tool to discover what's available for that scope before
 2. **search_rules** - Search rules by keyword
    - Parameters: `keyword` (required), `scope` (optional), `id` (optional)
    - Use when: User asks "Find rules about testing" or "Search for database rules"
-   - **VERY important:** This tool is only for searching rules, not for loading them. Use `FetchMcpResource` instead, e.g. when user asks to just load rules.
+   - **VERY important:** This tool is only for searching rules, not for loading them. Use the `FetchMcpResource` tool.
 
 3. **get_mcp_instructions** - Get detailed instructions on how to use this MCP server
    - No parameters required
