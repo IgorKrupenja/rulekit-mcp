@@ -1,7 +1,5 @@
 # Manual Setup
 
-Manual installation instructions for each editor. Run these in your project folder.
-
 ## Cursor
 
 1. Add to `.cursor/mcp.json`:
