@@ -188,7 +188,7 @@ The following checks run automatically in CI on push and pull requests:
 - **lint**: Runs ESLint to check code quality and style
 - **lint-markdown**: Lints markdown files (rules and README) using markdownlint
 - **typecheck**: Validates TypeScript types without emitting files
-- **validate**: Validates rule files (frontmatter + manifest structure + markdown syntax)
+- **validate**: Validates rule files (manifest structure + rule frontmatter + rule markdown syntax)
 - **check-context-size**: Checks merged projects/techs against safe token limits
 - **test**: Runs tests
 
