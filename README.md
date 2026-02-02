@@ -112,6 +112,8 @@ rules/
 
 [`rules/manifest.yml`](https://github.com/IgorKrupenja/rulekit-mcp/blob/main/rules/manifest.yml#L17) defines available IDs (projects, groups, techs, and languages) and relationships between them. IDs are used for topic-based prompting, e.g. "Get NestJS rules from MCP".
 
+`dependsOn` is used to declare dependencies between techs. E.g. if you decalre that `react` depends on `typescript`, then when you ask for "Get React rules from MCP" you will also get `typescript` rules.
+
 The `defaults.globalGroup` entry is applied on every request unless `USE_GLOBAL_RULES` environment variable is set to `false`.
 
 ### Rule format
