@@ -215,7 +215,9 @@ The MCP server provides:
   - Rules: `rules://{scope}/{key}` (e.g., `rules://project/buerokratt/Service-Module`)
   - Assets: `assets://{path}` (e.g., `assets://projects/buerokratt/sync-upstream.sh`).
 - **Tools**:
-  - `get_rules` - Get rules for a specific scope and key
-  - `get_mcp_instructions` - Get detailed instructions on how to use this MCP server
-  - `list_scope_keys` - List available keys for a scope
+  - `get_rules` - Fetch rules for a scope/key pair
+  - `get_mcp_instructions` - Show server usage guidance
+  - `list_scope_keys` - List keys for a given scope
   - `search_rules` - Search rules by keyword
+  - `list_assets` - List bundled asset paths
+  - `get_asset` - Fetch asset contents by path
