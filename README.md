@@ -110,15 +110,15 @@ rules/
 
 ### Manifest
 
-[`rules/manifest.yml`](https://github.com/IgorKrupenja/rulekit-mcp/blob/main/rules/manifest.yml#L17) defines available IDs (for projects, groups, techs, and languages) and relationships between them. IDs are used for topic-based prompting, e.g. "Get NestJS rules from MCP".
+[`rules/manifest.yml`](https://github.com/IgorKrupenja/rulekit-mcp/blob/main/rules/manifest.yml#L17) defines available keys (for projects, groups, techs, and languages) and relationships between them. Keys are used for topic-based prompting, e.g. "Get NestJS rules from MCP".
 
-`dependsOn` is used to declare dependencies between IDs. E.g. if you decalre that `react` depends on `typescript`, then when you ask for "Get React rules from MCP" you will also get `typescript` rules.
+`dependsOn` is used to declare dependencies between keys. E.g. if you decalre that `react` depends on `typescript`, then when you ask for "Get React rules from MCP" you will also get `typescript` rules.
 
 The `defaults.globalGroup` entry is applied on every request unless `USE_GLOBAL_RULES` environment variable is set to `false`.
 
 ### Rule format
 
-Rules are Markdown files with frontmatter. Use `appliesTo` in frontmatter to declare which IDs the rule applies to as defined in the manifest.
+Rules are Markdown files with frontmatter. Use `appliesTo` in frontmatter to declare which keys the rule applies to. Keys are defined in the [manifest](#manifest).
 
 Example:
 
@@ -203,7 +203,7 @@ pnpm lint:markdown
 pnpm typecheck
 pnpm validate
 pnpm check-context-size
-pnpm check-context-size <project-id> <tech-id>
+pnpm check-context-size <project-key> <tech-key>
 pnpm test
 ```
 
@@ -212,11 +212,11 @@ pnpm test
 The MCP server provides:
 
 - **Resources**:
-  - Rules: `rules://{scope}/{id}` (e.g., `rules://project/buerokratt/Service-Module`)
+  - Rules: `rules://{scope}/{key}` (e.g., `rules://project/buerokratt/Service-Module`)
   - Assets: `assets://{path}` (e.g., `assets://projects/buerokratt/sync-upstream.sh`).
     <!-- todo add missing -->
 - **Tools**:
-  - `get_rules` - Get rules for a specific scope and id
+  - `get_rules` - Get rules for a specific scope and key
   - `get_mcp_instructions` - Get detailed instructions on how to use this MCP server
-  - `list_scope_ids` - List available ids for a scope
+  - `list_scope_keys` - List available keys for a scope
   - `search_rules` - Search rules by keyword
