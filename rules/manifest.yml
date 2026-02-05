@@ -36,7 +36,7 @@ defaults:
   globalGroup: global
 
 projects:
-  rulekit-mcp:
+  IgorKrupenja/rulekit-mcp:
     description: Rulekit MCP server
     languages:
       - typescript

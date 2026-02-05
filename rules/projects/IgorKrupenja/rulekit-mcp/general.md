@@ -1,7 +1,7 @@
 ---
 appliesTo:
   projects:
-    - rulekit-mcp
+    - IgorKrupenja/rulekit-mcp
 description: Rulekit MCP repo rules
 ---
 
