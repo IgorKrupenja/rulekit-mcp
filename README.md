@@ -4,9 +4,7 @@ A modular MCP (Model Context Protocol) server for sharing AI coding assistant ru
 
 ## Highlights
 
-<!-- todo add highlights -->
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- Modular structure with
 
 ## Setup
 
@@ -62,8 +60,7 @@ If you followed the setup instructions above, your AI assistant will automatical
 - "Load Service-Module rules"
 - "Get rules for this project in MCP" (provided you have selected a file belonging to the project)
 - "Sync fork" or "Sync with upstream" (In Buerokatt repos)
-
-<!-- todo more examples, e.g. create nest project -->
+- "Create me a NestJS starter in api folder"
 
 ## Editing rules
 
