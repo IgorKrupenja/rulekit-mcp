@@ -11,7 +11,7 @@ The goal is to make it easy to share rules across different projects and support
 - Has support for lazy-loaded [assets](#assets). These can be bigger code snippets, helper scripts, YAML/JSON that are not loaded into context immediately — but only when actually needed based on user prompts.
 - Has CI [checks](#checks), including a script to check that merged rules for techs/projects do not exceed safe token context limits.
 - Has a basic set of NestJS rules. Can [bootstrap you a NestJS project](rules/techs/typescript/nestjs/rules.md) from a starter repo, will create/modify GitHub Actions CI workflows based on the project structure.
-- Has a comprehensive set of rules for [Bürokratt projects](rules/projects/buerokratt/general.md). Can synchronise forks, test Service-Module services by calling them directly, open browser and log in for debugging and much more!
+- Has a comprehensive set of rules for [Bürokratt projects](rules/projects/buerokratt/). Can synchronise forks, test Service-Module services by calling them directly, open browser and log in for debugging and much more!
 
 ## Setup
 
