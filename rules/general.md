@@ -23,9 +23,10 @@ description: Global code quality rules and development best practices
 - **Avoid Trivial Comments**: Do not add trivial comments in code, if they are obvious and code is simple and
   self-explanatory. Avoid describing what code does (should be clear from the code itself) — instead, explain **why** (e.g. business logic). Comments should be **concise**.
 
-### Linting
+### Checks
 
-- **Always Check**: ALWAYS check for lint and format issues when done with code (INCLUDING tests) changes
+- **Always Check**: ALWAYS check for lint and format issues when done with code (INCLUDING tests) changes.
+- **Tests**: ALWAYS run tests before after finishing with changes. If projects has different sets of tests (like e2e and unit), run all.
 
 ## Development Workflow
 
