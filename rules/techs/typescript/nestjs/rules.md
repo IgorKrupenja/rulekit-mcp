@@ -19,6 +19,8 @@ description: NestJS-specific code quality rules and best practices
 - `e2e` tests: if you write a test that actually modifies anything in DB, it makes sense to check if DB was actually modified. **Not** only checking what is e.g. returned by endpoint.
 - Script naming (non-watch focus): use `*:check` for read-only checks (e.g. `format:check`, `lint:check`); use `test:run` and `test:e2e:run` for non-watch test runs; plain `test` is watch by default.
 - After making changes in Prisma, suggest to run `prisma:generate`, `prisma:seed` and/or `prisma:migrate` scripts. Depending on what is necessary.
+- With `ClassSerializerInterceptor` and `excludeExtraneousValues` enabled, DTOs should explicitly use `@Expose()` on properties meant to be returned.
+- When creating DTOs that are subsets of existing DTOs, use `PickType` (or similar mapped types) instead of duplicating fields.
 
 ## Bootstrapping with nestjs-starter
 
