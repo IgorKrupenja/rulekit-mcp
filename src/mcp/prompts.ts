@@ -6,7 +6,7 @@ import { getMergedRules } from '@/utils/rules.ts';
 export function setupPrompts(server: McpServer): void {
   // Prompt: Get development rules as a system prompt
   server.registerPrompt(
-    'development-rules',
+    'development_rules',
     {
       description: 'Get development rules as a system prompt for a scope and key (works with any AI editor)',
       argsSchema: {

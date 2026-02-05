@@ -223,4 +223,4 @@ The MCP server provides:
   - `list_assets` - List bundled asset paths
   - `get_asset` - Fetch asset contents by path
 - **Prompts**:
-  - `development-rules` - Get development rules as a system prompt for a scope/key pair
+  - `development_rules` - Get development rules as a system prompt for a scope/key pair
