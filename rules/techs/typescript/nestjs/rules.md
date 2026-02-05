@@ -5,6 +5,8 @@ appliesTo:
 description: NestJS-specific code quality rules and best practices
 ---
 
+## General rules
+
 - Use `pnpm`, not `npm` or `yarn`.
 - Use `vitest`, not `jest`.
 - For imports, `.js` extensions should be appended, e.g.: `import { config } from './config.js';`
