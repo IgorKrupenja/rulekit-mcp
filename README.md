@@ -2,11 +2,16 @@
 
 A modular MCP (Model Context Protocol) server for sharing AI coding assistant rules for different projects and tech stacks.
 
+The goal is to make it easy to share rules across different projects and support a wide range of use cases and tools. These could be AI assisted coding with different editors, bootstrapping new projects, automated code reviews and so on.
+
 ## Highlights
 
-<!-- todo add highlights -->
-
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- Modular structure with different scopes for rules: projects, groups, techs, and languages. So e.g. asking to load rules in Buerokratt Service-Module repo will load repo-specific rules (project), general Buerokratt DSL/SQL rules (group), general React rules (tech) and general TypeScript rules (language). See [editing rules](#editing-rules) for more details.
+- Has [support](#2-configure-your-editor) for different editors. MCP [features](#mcp-server-features) are also implemented in a way to allow this.
+- Has support for lazy-loaded [assets](#assets). These can be bigger code snippets, helper scripts, YAML/JSON that are not loaded into context immediately — but only when actually needed based on user prompts.
+- Has CI [checks](#checks), including a script to check that merged rules for techs/projects do not exceed safe token context limits.
+- Has a basic set of NestJS rules. Can [bootstrap you a NestJS project](rules/techs/typescript/nestjs/rules.md) from a starter repo, will create/modify GitHub Actions CI workflows based on the project structure.
+- Has a comprehensive set of rules for [Bürokratt projects](rules/projects/buerokratt/). Can synchronise forks, test Service-Module services by calling them directly, open browser and log in for debugging and much more!
 
 ## Setup
 
@@ -62,8 +67,7 @@ If you followed the setup instructions above, your AI assistant will automatical
 - "Load Service-Module rules"
 - "Get rules for this project in MCP" (provided you have selected a file belonging to the project)
 - "Sync fork" or "Sync with upstream" (In Buerokatt repos)
-
-<!-- todo more examples, e.g. create nest project -->
+- "Create me a NestJS starter in api folder"
 
 ## Editing rules
 
@@ -220,3 +224,5 @@ The MCP server provides:
   - `search_rules` - Search rules by keyword
   - `list_assets` - List bundled asset paths
   - `get_asset` - Fetch asset contents by path
+- **Prompts**:
+  - `development_rules` - Get development rules as a system prompt for a scope/key pair

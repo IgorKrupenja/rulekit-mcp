@@ -6,6 +6,7 @@
 
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 
+import { setupPrompts } from '@/mcp/prompts.ts';
 import { setupResources } from '@/mcp/resources.ts';
 import { setupTools } from '@/mcp/tools.ts';
 
@@ -32,6 +33,7 @@ export function createServer(): McpServer {
 
   setupResources(server);
   setupTools(server);
+  setupPrompts(server);
 
   return server;
 }

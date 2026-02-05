@@ -1,22 +1,12 @@
-/**
- * MCP Prompt Handlers
- *
- * Handles prompt-related requests (formatted prompts for AI assistants)
- */
-
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
 
 import { getMergedRules } from '@/utils/rules.ts';
 
-/**
- * Set up prompt handlers for the MCP server
- */
 export function setupPrompts(server: McpServer): void {
   // Prompt: Get development rules as a system prompt
-  // Works with any AI editor: Cursor, VS Code, JetBrains, etc.
   server.registerPrompt(
-    'development-rules',
+    'development_rules',
     {
       description: 'Get development rules as a system prompt for a scope and key (works with any AI editor)',
       argsSchema: {
